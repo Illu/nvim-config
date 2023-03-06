@@ -1,6 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
@@ -44,17 +41,11 @@ return require('packer').startup(function(use)
             }
         }
 
-        -- use {
-        --   'nvim-tree/nvim-tree.lua',
-        --   requires = {
-        --     'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        --   },
-        --   tag = 'nightly' -- optional, updated every week. (see issue #1193)
-        -- }
-
         use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
         use('nvim-treesitter/playground')
         use('theprimeagen/harpoon')
         use('tpope/vim-commentary')
         use('vim-airline/vim-airline')
+        -- TODO: set a default theme
+        use('vim-airline/vim-airline-themes')
     end)
