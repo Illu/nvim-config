@@ -48,4 +48,6 @@ return require('packer').startup(function(use)
         use('vim-airline/vim-airline')
         -- TODO: set a default theme
         use('vim-airline/vim-airline-themes')
+
+        use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
     end)
