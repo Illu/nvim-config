@@ -1,6 +1,11 @@
-local builtin = require('telescope.builtin')
+local telescope = require('telescope')
 
-vim.keymap.set('n', '<leader>o', builtin.find_files, {})
-vim.keymap.set('n', '<C-o>', builtin.git_files, {})
-vim.keymap.set('n', '<leader>s', builtin.live_grep, {})
+-- show hidden files in telescope
 
+telescope.setup {
+    pickers = {
+        find_files = {
+            hidden = true
+        }
+    }
+}
