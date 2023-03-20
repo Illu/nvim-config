@@ -28,7 +28,7 @@ local opts = {
   side = "left",
   hide_statusline = true,
   update_interval = 1000,
-  sections = { harpoon_marks, "symbols", "diagnostics" }
+  sections = { harpoon_marks, "diagnostics", "files" }
 }
 
 sidebar.setup(opts)

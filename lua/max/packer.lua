@@ -8,20 +8,7 @@ return require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
-  -- use({
-  --   'rose-pine/neovim',
-  --   as = 'rose-pine',
-  --   config = function()
-  --     vim.cmd('colorscheme rose-pine')
-  --   end
-  -- })
-
-  use { "catppuccin/nvim",
-    as = "catppuccin",
-    -- config = function()
-    --   vim.cmd.colorscheme "catppuccin"
-    -- end
-  }
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -62,4 +49,14 @@ return require('packer').startup(function(use)
 
   -- Sidebar (obviously)
   use('sidebar-nvim/sidebar.nvim')
+
+  use {
+  "folke/trouble.nvim",
+  requires = "nvim-tree/nvim-web-devicons",
+  config = function()
+    require("trouble").setup {
+
+    }
+  end
+}
 end)
