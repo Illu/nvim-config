@@ -50,13 +50,23 @@ return require('packer').startup(function(use)
   -- Sidebar (obviously)
   use('sidebar-nvim/sidebar.nvim')
 
+  -- Error/warning window
   use {
-  "folke/trouble.nvim",
-  requires = "nvim-tree/nvim-web-devicons",
-  config = function()
-    require("trouble").setup {
+    "folke/trouble.nvim",
+    requires = "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
 
-    }
-  end
-}
+      }
+    end
+  }
+
+  -- Git decorations (blame / preview diffs...)
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
+
 end)

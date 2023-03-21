@@ -41,3 +41,12 @@ vim.keymap.set('n', '<leader>s', builtin.live_grep, {})
 vim.keymap.set("n", "<leader>t", "<cmd>TroubleToggle<cr>",
   {silent = true, noremap = true}
 )
+
+--------------
+-- GitSigns --
+--------------
+
+local gs = require("gitsigns")
+
+vim.keymap.set('n', '<leader>g', gs.preview_hunk, {})
+vim.keymap.set('n', '<leader>b', function() gs.blame_line{full=true} end)
