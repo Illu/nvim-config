@@ -1,4 +1,3 @@
-# NVIM CHEAT SHEET
 ## A list of useful shortcuts
 
 ### Files
