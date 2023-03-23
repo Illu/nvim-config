@@ -33,9 +33,14 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- Parsing
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('nvim-treesitter/playground')
+
+  -- quick switch between files
   use('theprimeagen/harpoon')
+
+  -- comments
   use('tpope/vim-commentary')
 
   -- Status line
