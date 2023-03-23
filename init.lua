@@ -1,1 +1,1 @@
-require("max")
+require("config")
