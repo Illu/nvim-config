@@ -1,15 +1,6 @@
 local line = require('lualine')
 
-local emptyConfig = {
-  lualine_a = {},
-  lualine_b = {},
-  lualine_c = {},
-  lualine_x = {},
-  lualine_y = {},
-  lualine_z = {}
-}
-
-local config = {
+local sections = {
     lualine_a = {},
     lualine_b = {},
     lualine_c = {},
@@ -30,6 +21,5 @@ line.setup {
     always_divide_middle = false,
     globalstatus = true,
   },
-  sections = config,
-  -- tabline = emptyConfig
+  sections = sections,
 }
