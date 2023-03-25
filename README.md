@@ -19,14 +19,16 @@
 
 ### Code 
 
-| Command                 | Shortcut  |
-|-------------------------|-----------|
-| Go to file under cursor | gd        |
-| Format file             | Space - f |
-| Get type definition     | K         |
-| Comment line            | gcc       |
-| Comment selection       | gc        |
-| Toggle Trouble          | Space - t |
+| Command                 | Shortcut    |
+|-------------------------|-------------|
+| Go to file under cursor | gd          |
+| Format file             | Space - f   |
+| Get type definition     | K           |
+| Comment line            | gcc         |
+| Comment selection       | gc          |
+| Toggle Trouble          | Space - t   |
+| Rename something        | Space - vrn |
+| See all references      | Space - vrr |
 
 ### Harpoon
 
