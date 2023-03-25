@@ -4,15 +4,6 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-    'nvim-telescope/telescope.nvim',
-    branch = '0.1.x',
-    requires = { { 'nvim-lua/plenary.nvim' } },
-    file_ignore_patterns = {".git/"}
-  }
-
-  use { "catppuccin/nvim", as = "catppuccin" }
-
-  use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v1.x',
     requires = {
@@ -34,6 +25,17 @@ return require('packer').startup(function(use)
       { 'rafamadriz/friendly-snippets' }, -- Optional
     }
   }
+
+  -- Fuzzy finder
+  use {
+    'nvim-telescope/telescope.nvim',
+    branch = '0.1.x',
+    requires = { { 'nvim-lua/plenary.nvim' } },
+    file_ignore_patterns = { ".git/" }
+  }
+
+  -- Theme
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Parsing
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
@@ -75,5 +77,4 @@ return require('packer').startup(function(use)
       require('gitsigns').setup()
     end
   }
-
 end)
