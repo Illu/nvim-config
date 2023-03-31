@@ -29,6 +29,8 @@
 | Toggle Trouble          | Space - t   |
 | Rename something        | Space - vrn |
 | See all references      | Space - vrr |
+| Cut out word            | ciw         |
+| Cut out inside quotes   | ci"         |
 
 ### Harpoon
 
