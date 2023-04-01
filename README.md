@@ -15,6 +15,7 @@
 |-------------------------|----------------------------|
 | Go to file under cursor | gd (ctrl - t to come back) |
 | Switch panes            | ctrl - w - w               |
+| Toggle sidebar          | ctrl - b                   |
 | Preview a .md file      | :Glow                      |
 
 ### Code 
