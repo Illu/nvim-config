@@ -48,7 +48,7 @@ vim.keymap.set("n", "<leader>t", "<cmd>TroubleToggle<cr>",
 local gs = require("gitsigns")
 
 vim.keymap.set('n', '<leader>g', gs.preview_hunk, {})
-vim.keymap.set('n', '<leader>b', function() gs.blame_line { full = true } end)
+vim.keymap.set('n', '<leader>b', function() gs.blame_line { full = false } end)
 
 --------------
 -- Sidebar --
@@ -62,4 +62,7 @@ vim.keymap.set('n', '<C-b>', sb.toggle, {})
 -- Terminal --
 --------------
 
-vim.keymap.set('n', '<leader>`', '<CMD>lua require("FTerm").toggle()<CR>')
+local term = require("FTerm")
+
+vim.keymap.set('n', '<C-t>', term.toggle, { noremap = true })
+vim.keymap.set('t', '<C-t>', term.toggle, { noremap = true })
