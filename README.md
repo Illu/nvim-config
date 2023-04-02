@@ -8,6 +8,7 @@
 | Find a file        | Space - o  |
 | Global search      | Space - s  |
 | Open netrw         | Space - pv |
+| Open terminal      | Space - `  |
 
 ### General
 

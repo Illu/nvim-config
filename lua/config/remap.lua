@@ -57,3 +57,9 @@ vim.keymap.set('n', '<leader>b', function() gs.blame_line { full = true } end)
 local sb = require("sidebar-nvim")
 
 vim.keymap.set('n', '<C-b>', sb.toggle, {})
+
+--------------
+-- Terminal --
+--------------
+
+vim.keymap.set('n', '<leader>`', '<CMD>lua require("FTerm").toggle()<CR>')

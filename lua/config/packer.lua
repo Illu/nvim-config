@@ -77,4 +77,8 @@ return require('packer').startup(function(use)
       require('gitsigns').setup()
     end
   }
+
+  -- Terminal
+  use('numToStr/FTerm.nvim')
+
 end)
