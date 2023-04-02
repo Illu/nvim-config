@@ -4,7 +4,6 @@
 
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -------------
@@ -28,18 +27,18 @@ vim.keymap.set("n", "<leader>4", function() ui.nav_file(4) end)
 -- Telescope --
 ---------------
 
-local builtin = require('telescope.builtin')
+local telescope = require('telescope.builtin')
 
-vim.keymap.set('n', '<leader>o', builtin.find_files, {})
-vim.keymap.set('n', '<C-o>', builtin.git_files, {})
-vim.keymap.set('n', '<leader>s', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>o', telescope.find_files, {})
+vim.keymap.set('n', '<C-o>', telescope.git_files, {})
+vim.keymap.set('n', '<leader>s', telescope.live_grep, {})
 
 -------------
 -- Trouble --
 -------------
 
 vim.keymap.set("n", "<leader>t", "<cmd>TroubleToggle<cr>",
-  {silent = true, noremap = true}
+  { silent = true, noremap = true }
 )
 
 --------------
@@ -49,7 +48,7 @@ vim.keymap.set("n", "<leader>t", "<cmd>TroubleToggle<cr>",
 local gs = require("gitsigns")
 
 vim.keymap.set('n', '<leader>g', gs.preview_hunk, {})
-vim.keymap.set('n', '<leader>b', function() gs.blame_line{full=true} end)
+vim.keymap.set('n', '<leader>b', function() gs.blame_line { full = true } end)
 
 --------------
 -- Sidebar --
