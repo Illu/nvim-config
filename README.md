@@ -8,7 +8,7 @@
 | Find a file        | Space - o  |
 | Global search      | Space - s  |
 | Open netrw         | Space - pv |
-| Toggle terminal    | ctrl - t   |
+| Toggle terminal    | ctrl - `   |
 
 ### General
 

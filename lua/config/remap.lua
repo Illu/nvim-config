@@ -64,5 +64,5 @@ vim.keymap.set('n', '<C-b>', sb.toggle, {})
 
 local term = require("FTerm")
 
-vim.keymap.set('n', '<C-t>', term.toggle, { noremap = true })
-vim.keymap.set('t', '<C-t>', term.toggle, { noremap = true })
+vim.keymap.set('n', '<C-`>', term.toggle, { noremap = true })
+vim.keymap.set('t', '<C-`>', term.toggle, { noremap = true })
