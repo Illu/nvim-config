@@ -81,4 +81,5 @@ return require('packer').startup(function(use)
   -- Terminal
   use('numToStr/FTerm.nvim')
 
+  use('theprimeagen/vim-be-good')
 end)
