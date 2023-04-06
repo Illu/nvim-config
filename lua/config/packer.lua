@@ -57,9 +57,6 @@ return require('packer').startup(function(use)
   -- Preview MD files
   use { "ellisonleao/glow.nvim", config = function() require("glow").setup() end }
 
-  -- Sidebar (obviously)
-  use('sidebar-nvim/sidebar.nvim')
-
   -- devicons
   use("nvim-tree/nvim-web-devicons")
 
@@ -83,7 +80,7 @@ return require('packer').startup(function(use)
   -- Terminal
   use('numToStr/FTerm.nvim')
 
-  -- lul
+  -- 69420
   use('theprimeagen/vim-be-good')
 
   -- prettier/eslint format

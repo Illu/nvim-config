@@ -52,14 +52,6 @@ vim.keymap.set('n', '<leader>g', gs.preview_hunk, {})
 vim.keymap.set('n', '<leader>b', function() gs.blame_line { full = false } end)
 
 --------------
--- Sidebar --
---------------
-
-local sb = require("sidebar-nvim")
-
-vim.keymap.set('n', '<C-b>', sb.toggle, {})
-
---------------
 -- Terminal --
 --------------
 
