@@ -1,12 +1,12 @@
 local line = require('lualine')
 
 local sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = {},
-    lualine_x = { 'filetype' },
-    lualine_y = { 'filename' },
-    lualine_z = { 'mode' },
+    lualine_a = { 'filetype' },
+    lualine_b = { 'filename' },
+    lualine_c = { 'mode' },
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = {},
 }
 
 local custom_theme = require'lualine.themes.auto'

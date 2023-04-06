@@ -3,12 +3,13 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
+  use { 'neovim/nvim-lspconfig' }
+
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v1.x',
     requires = {
       -- LSP Support
-      { 'neovim/nvim-lspconfig' },             -- Required
       { 'williamboman/mason.nvim' },           -- Optional
       { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
@@ -59,14 +60,15 @@ return require('packer').startup(function(use)
   -- Sidebar (obviously)
   use('sidebar-nvim/sidebar.nvim')
 
+  -- devicons
+  use("nvim-tree/nvim-web-devicons")
+
   -- Error/warning window
   use {
     "folke/trouble.nvim",
     requires = "nvim-tree/nvim-web-devicons",
     config = function()
-      require("trouble").setup {
-
-      }
+      require("trouble").setup {}
     end
   }
 
@@ -81,5 +83,13 @@ return require('packer').startup(function(use)
   -- Terminal
   use('numToStr/FTerm.nvim')
 
+  -- lul
   use('theprimeagen/vim-be-good')
+
+  -- prettier/eslint format
+  use('jose-elias-alvarez/null-ls.nvim')
+  use('MunifTanjim/prettier.nvim')
+
+  -- Color highlights
+  use {'norcalli/nvim-colorizer.lua', config = function() require('colorizer').setup() end }
 end)
