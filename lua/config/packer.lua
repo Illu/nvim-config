@@ -83,9 +83,8 @@ return require('packer').startup(function(use)
   -- 69420
   use('theprimeagen/vim-be-good')
 
-  -- prettier/eslint format
+  -- prettier/eslint format etc
   use('jose-elias-alvarez/null-ls.nvim')
-  use('MunifTanjim/prettier.nvim')
 
   -- Color highlights
   use {'norcalli/nvim-colorizer.lua', config = function() require('colorizer').setup() end }
