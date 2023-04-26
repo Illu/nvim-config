@@ -88,4 +88,7 @@ return require('packer').startup(function(use)
 
   -- Color highlights
   use {'norcalli/nvim-colorizer.lua', config = function() require('colorizer').setup() end }
+
+  -- Auto close and rename HTML tags
+  use{'windwp/nvim-ts-autotag', config = function() require('nvim-ts-autotag').setup() end }
 end)
