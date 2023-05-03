@@ -2,7 +2,7 @@ local line = require('lualine')
 
 local sections = {
     lualine_a = { 'filetype' },
-    lualine_b = { 'filename' },
+    lualine_b = {{ 'filename', path = 4 }},
     lualine_c = { 'mode' },
     lualine_x = {},
     lualine_y = {},
