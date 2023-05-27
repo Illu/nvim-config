@@ -37,6 +37,7 @@ local telescope = require('telescope.builtin')
 vim.keymap.set('n', '<leader>o', telescope.find_files, {})
 vim.keymap.set('n', '<C-o>', telescope.git_files, {})
 vim.keymap.set('n', '<leader>s', telescope.live_grep, {})
+vim.keymap.set('n', '<leader>vr', telescope.lsp_references, {})
 
 -------------
 -- Trouble --

@@ -37,10 +37,12 @@
 | Comment line            | gcc         |
 | Comment selection       | gc          |
 | Toggle Trouble          | Space - t   |
-| Rename something        | Space - vrn |
-| See all references      | Space - vrr |
+| Rename something (OFF)  | Space - vrn |
+| See all references (OFF)| Space - vrr |
 | Cut out word            | ciw         |
 | Cut out inside quotes   | ci"         |
+| Find all refs for word  | Space - vr  |
+
 
 ### Harpoon
 
