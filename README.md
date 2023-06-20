@@ -1,3 +1,13 @@
+# Neovim configuration
+
+## Installation
+
+- Install neovim (`brew install neovim`)
+- Clone this project inside `~/.config/nvim/`
+- Install prettierd (`brew install prettierd`)
+- Install Packer
+- Open the `packer.lua` file with vim, and run `:so`, `:packerSync`
+
 ## A list of useful shortcuts
 
 ### Files
@@ -15,17 +25,17 @@
 | Command                 | Shortcut                   |
 |-------------------------|----------------------------|
 | Go to file under cursor | gd (ctrl - t to come back) |
-| Toggle sidebar          | ctrl - b                   |
 | Preview a .md file      | :Glow                      |
+| Go back to previous file| ctrl - ^                   |
 
 ### Splits
 
-| Command                  | Shortcut                   |
-|--------------------------|----------------------------|
-| Split vertically         | :vs                        |
-| Split horizontally       | :sp                        |
-| Switch panes             | ctrl - w - w               |
-| Switch panes w/ direction| ctrl - w - [hjkl]          |
+| Command                  | Shortcut          |
+|--------------------------|-------------------|
+| Split vertically         | :vs               |
+| Split horizontally       | :sp               |
+| Switch panes w/ direction| ctrl - w - [hjkl] |
+| Close pane               | ctrl - w - q      |
 
 ### Code 
 
@@ -42,6 +52,8 @@
 | Cut out word            | ciw         |
 | Cut out inside quotes   | ci"         |
 | Find all refs for word  | Space - vr  |
+| See error at cursor     | Space - vd  |
+| Show autocomplete (EDIT)| ctrl - c    |
 
 
 ### Harpoon
@@ -60,3 +72,6 @@
 |----------------------------|-----------|
 | Git diff the current line  | Space - g |
 | Git blame the current line | Space - b |
+| Show Fugitive              | :Git      |
+| Reset file                 | :Gread    |
+

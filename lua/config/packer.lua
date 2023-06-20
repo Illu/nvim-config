@@ -77,6 +77,9 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- Git wrapper for vim
+  use("tpope/vim-fugitive")
+
   -- Terminal
   use('numToStr/FTerm.nvim')
 
