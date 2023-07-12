@@ -35,8 +35,10 @@ vim.keymap.set("n", "<leader>4", function() ui.nav_file(4) end)
 local telescope = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>o', telescope.find_files, {})
+vim.keymap.set('v', '<leader>o', 'y<ESC>:Telescope find_files default_text=<c-r>0<CR>', {})
 vim.keymap.set('n', '<C-o>', telescope.git_files, {})
 vim.keymap.set('n', '<leader>s', telescope.live_grep, {})
+vim.keymap.set('v', '<leader>s', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>', {})
 vim.keymap.set('n', '<leader>vr', telescope.lsp_references, {})
 
 -------------
