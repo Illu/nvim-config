@@ -20,6 +20,22 @@ lsp.configure('lua_ls', {
   },
 })
 
+
+-- Fixes multiple definitions when going using gd
+local function patch(result)
+  if not vim.tbl_islist(result) or type(result) ~= "table" then
+    return result
+  end
+
+  return { result[1] }
+end
+
+local function handle_gtd(err, result, ctx, ...)
+  vim.lsp.handlers['textDocument/definition'](err, patch(result), ctx, ...)
+end
+
+lsp.handle_gtd = handle_gtd
+
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
