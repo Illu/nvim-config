@@ -6,7 +6,8 @@ lsp.ensure_installed({
   'tsserver',
   'eslint',
   'rust_analyzer',
-  'lua_ls'
+  'lua_ls',
+  'gopls',
 })
 
 -- Fixes Undefined global 'vim'
@@ -19,7 +20,6 @@ lsp.configure('lua_ls', {
     },
   },
 })
-
 
 -- Fixes multiple definitions when going using gd
 local function patch(result)

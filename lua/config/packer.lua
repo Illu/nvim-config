@@ -83,9 +83,6 @@ return require('packer').startup(function(use)
   -- Terminal
   use('numToStr/FTerm.nvim')
 
-  -- 69420
-  use('theprimeagen/vim-be-good')
-
   -- prettier/eslint format etc
   use('jose-elias-alvarez/null-ls.nvim')
 
