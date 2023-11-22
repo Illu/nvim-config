@@ -4,7 +4,8 @@
 
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
--- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+-- might be conflicting with null-ls, we'll see
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
@@ -46,7 +47,7 @@ vim.keymap.set('n', '<leader>vr', telescope.lsp_references, {})
 -------------
 
 vim.keymap.set("n", "<leader>t", "<cmd>TroubleToggle<cr>",
-  { silent = true, noremap = true }
+    { silent = true, noremap = true }
 )
 
 --------------
