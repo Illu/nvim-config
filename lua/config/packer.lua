@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
     branch = 'v1.x',
     requires = {
       -- LSP Support
+      {'neovim/nvim-lspconfig'},
       { 'williamboman/mason.nvim' },           -- Optional
       { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
@@ -39,35 +40,27 @@ return require('packer').startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin" }
 
   -- Parsing
-  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-  use('nvim-treesitter/playground')
+    use {'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
 
   -- quick switch between files
   use('theprimeagen/harpoon')
+
+  -- devicons
+  use 'kyazdani42/nvim-web-devicons'
 
   -- comments
   use('tpope/vim-commentary')
 
   -- Status line
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+  use 'nvim-lualine/lualine.nvim'
 
   -- Preview MD files
   use { "ellisonleao/glow.nvim", config = function() require("glow").setup() end }
-
-  -- devicons
-  use("nvim-tree/nvim-web-devicons")
-
-  -- Error/warning window
-  use {
-    "folke/trouble.nvim",
-    requires = "nvim-tree/nvim-web-devicons",
-    config = function()
-      require("trouble").setup {}
-    end
-  }
 
   -- Git decorations (blame / preview diffs...)
   use {

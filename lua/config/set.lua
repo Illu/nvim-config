@@ -1,29 +1,28 @@
-vim.opt.guicursor = ""
+local options = {
+    ma = true,
+    mouse = "a",
+    cursorline = true,
+    tabstop = 4,
+    shiftwidth = 4,
+    softtabstop = 4,
+    expandtab = true,
+    autoread = true,
+    nu = true,
+    foldlevelstart = 99,
+    scrolloff = 8,
+    writebackup = false,
+    clipboard = "unnamedplus",
+    showmode = false,
+    swapfile = false,
+    backup = false,
+    undodir = os.getenv("HOME") .. "/.vim/undodir",
+    undofile = true,
+    smartindent = true,
+    relativenumber = true,
+    guicursor = "",
+    termguicolors = true,
+}
 
-vim.opt.nu = true
-vim.opt.relativenumber = true
-
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-
-vim.opt.smartindent = true
-
-vim.opt.wrap = false
-
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
-
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-
-vim.opt.termguicolors = true
-
-vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
-
-vim.opt.updatetime = 50
+for k, v in pairs(options) do
+  vim.opt[k] = v
+end
