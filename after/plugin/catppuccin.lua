@@ -39,6 +39,7 @@ require("catppuccin").setup({
         telescope = true,
         notify = false,
         mini = false,
+        harpoon = true,
     },
 })
 
