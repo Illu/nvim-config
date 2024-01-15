@@ -4,9 +4,14 @@
 
 - Install neovim (`brew install neovim`)
 - Clone this project inside `~/.config/nvim/`
-- Install prettierd (`brew install prettierd`)
-- Install Packer
-- Open the `packer.lua` file with vim, and run `:so`, `:packerSync`
+- Open nvim, you're done!
+
+### Bonus: add the `vi` alias:
+
+``` bash
+alias vi="nvim"
+alias vim="nvim"
+```
 
 ## A list of useful shortcuts
 
