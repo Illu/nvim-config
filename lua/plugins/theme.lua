@@ -1,3 +1,4 @@
+-- catppuccin
 -- return {
 -- 	"catppuccin/nvim",
 -- 	lazy = false, -- make sure we load this during startup if it is your main colorscheme
@@ -14,19 +15,22 @@
 -- 		vim.cmd([[colorscheme catppuccin]])
 -- 	end,
 -- }
-
+--
+-- gruvbox
 return {
     'ellisonleao/gruvbox.nvim',
 	lazy = false,
 	priority = 1000,
 	config = function()
         require("gruvbox").setup({
-            palette_overrides = {
-                dark0 = "#000000",
-            }
+            -- the first one works
+            -- palette_overrides = {
+            --     dark0 = "#000000",
+            -- }
             -- overrides = {
             --     Normal = {bg = "#000000"}
             -- }
+            contrast="hard"
         })
         vim.o.background = "dark"
 		vim.cmd([[colorscheme gruvbox]])

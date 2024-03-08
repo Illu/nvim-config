@@ -52,4 +52,14 @@ for k, v in pairs(options) do
     vim.opt[k] = v
 end
 
+
+-- highlight when yanking
+vim.api.nvim_create_autocmd('TextYankPost', {
+    desc = "Highlight when yanking text",
+    group = vim.api.nvim_create_augroup('highlight-yank', {clear = true}),
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+})
+
 require("lazy").setup("plugins")
