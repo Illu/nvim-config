@@ -17,10 +17,9 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- TODO: this gets overwritten by the neoformat config
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 -- what does this do?
-vim.keymap.set("x", "<leader>p", "\"_dP")
+-- vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
--- are those actually used?
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
