@@ -6,7 +6,6 @@ return {
                 section_separators = '',
                 component_separators = '',
                 icons_enabled = false,
-                -- theme = 'catppuccin',
                 theme = 'gruvbox',
                 always_divide_middle = false,
                 globalstatus = true,
