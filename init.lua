@@ -1,8 +1,5 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
--- does this conflict with neoformat? 
--- TODO: this gets overwritten by the neoformat config
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set('n', '<leader>vd', vim.diagnostic.open_float)
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
@@ -81,8 +78,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
     vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-    vim.keymap.set('n', '<leader>f', function()
-      vim.lsp.buf.format { async = true }
-    end, opts)
+    -- replaced with neoformat
+    -- vim.keymap.set('n', '<leader>f', function()
+    --   vim.lsp.buf.format { async = true }
+    -- end, opts)
   end,
 })
