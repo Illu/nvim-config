@@ -23,13 +23,12 @@ return {
 	priority = 1000,
 	config = function()
         require("gruvbox").setup({
-            -- the first one works
-            -- palette_overrides = {
-            --     dark0 = "#000000",
-            -- }
-            -- overrides = {
-            --     Normal = {bg = "#000000"}
-            -- }
+            palette_overrides = {
+                dark0 = "#000000",
+            },
+            overrides = {
+                Normal = {bg = "#000000"}
+            },
             contrast="hard"
         })
         vim.o.background = "dark"
