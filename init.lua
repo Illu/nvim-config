@@ -5,6 +5,18 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])
+vim.keymap.set('t', '<C-w>h', [[<C-\><C-n><C-w>h]])
+vim.keymap.set('t', '<C-w>j', [[<C-\><C-n><C-w>j]])
+vim.keymap.set('t', '<C-w>k', [[<C-\><C-n><C-w>k]])
+vim.keymap.set('t', '<C-w>l', [[<C-\><C-n><C-w>l]])
+
+vim.api.nvim_create_autocmd({"TermOpen", "BufEnter"}, {
+    pattern = "term://*",
+    callback = function()
+        vim.cmd("startinsert")
+    end,
+})
 
 local options = {
     mouse = "a",
