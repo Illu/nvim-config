@@ -10,6 +10,7 @@ vim.keymap.set('t', '<C-w>h', [[<C-\><C-n><C-w>h]])
 vim.keymap.set('t', '<C-w>j', [[<C-\><C-n><C-w>j]])
 vim.keymap.set('t', '<C-w>k', [[<C-\><C-n><C-w>k]])
 vim.keymap.set('t', '<C-w>l', [[<C-\><C-n><C-w>l]])
+vim.keymap.set('t', '<C-w>q', [[<C-\><C-n><C-w>q]])
 
 vim.api.nvim_create_autocmd({"TermOpen", "BufEnter"}, {
     pattern = "term://*",
