@@ -18,11 +18,13 @@ return {
             {},
             vim.lsp.protocol.make_client_capabilities(),
             cmp_lsp.default_capabilities())
+            capabilities.textDocument.completion.completionItem.snippetSupport = false
+
 
         require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = {
-                "tsserver",
+                "ts_ls",
                 "lua_ls",
                 "gopls",
             },
@@ -47,7 +49,7 @@ return {
                         }
                     }
                 end,
-                ["tsserver"] = function()
+                ["ts_ls"] = function()
                     local lspconfig = require("lspconfig")
                     local function filter(arr, fn)
                         if type(arr) ~= "table" then
@@ -67,7 +69,7 @@ return {
                     local function filterReactDTS(value)
                         return string.match(value.targetUri, 'react/index.d.ts') == nil
                     end
-                    lspconfig.tsserver.setup {
+                    lspconfig.ts_ls.setup {
                         capabilities = capabilities,
                         handlers = {
                             ['textDocument/definition'] = function(err, result, method, ...)
