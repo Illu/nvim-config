@@ -18,7 +18,7 @@ return {
             {},
             vim.lsp.protocol.make_client_capabilities(),
             cmp_lsp.default_capabilities())
-            capabilities.textDocument.completion.completionItem.snippetSupport = false
+        capabilities.textDocument.completion.completionItem.snippetSupport = false
 
 
         require("mason").setup()

@@ -6,7 +6,7 @@ return {
                 section_separators = '',
                 component_separators = '',
                 icons_enabled = false,
-                theme = 'gruvbox',
+                theme = "auto",
                 always_divide_middle = false,
                 globalstatus = true,
             },
